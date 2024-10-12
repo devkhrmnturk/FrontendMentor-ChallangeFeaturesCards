@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    /* PRIMARY */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* NEUTRAL */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    font-size: 15px;
+    background-color: var(--VeryLightGray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1.5;
+    /* for attribution */
+    position: relative;
+}
+
+main {
+    max-width: 1100px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.intro {
+    text-align: center;
+}
+
+.features {
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.features__center>article:nth-child(1) {
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width:1100px) {
+    body {
+        /* safe area for mobile */
+        padding: 1rem;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+}
+
+/* card */
+.card {
+    min-width: 320px;
+    min-height: 220px;
+    background-color: white;
+    box-shadow: 0 0 1rem gainsboro;
+    border-radius: 0.5rem;
+
+    padding: 1.5rem;
+    /* for image layout */
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width:370px) {
+    .card {
+        min-width: none;
+        max-width: 330px;
+    }
+}
+
+.card--red {
+    border-top: 0.250rem solid var(--Red);
+}
+
+.card--cyan {
+    border-top: 0.250rem solid var(--Cyan)
+}
+
+.card--orange {
+    border-top: 0.250rem solid var(--Orange)
+}
+
+.card--blue {
+    border-top: 0.250rem solid var(--Blue);
+}
+
+.card--img {
+    max-width: 64px;
+    max-height: 64px;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--VeryDarkBlue);
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 2rem;
+    color: var(--GrayishBlue);
+}
+
+h4 {
+    color: var(--VeryDarkBlue);
+    font-size: 1rem;
+}
+
+p {
+    color: var(--GrayishBlue);
+}
+
+.intro>p {
+    margin-top: 1rem;
+}
+
+.card>p {
+    margin-top: 0.5rem;
+    font-size: 0.750rem;
+    max-inline-size: 30ch;
+}
+
+.attribution {
+    font-size: 0.5rem;
+    position: absolute;
+    left: 0;
+    rotate: 90deg;
+    transform: translateY(600%);
+    z-index: -1;
+}
